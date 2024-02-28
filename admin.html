@@ -1,36 +1,142 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Tree Plantation Charity Management System</title>
+    <title>Admin Dashboard - EverGreen Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-green-50">
-    <nav class="bg-green-600 text-white p-4 flex justify-between">
-        <span class="font-bold">Admin Dashboard</span>
-        <button class="px-4 py-2 bg-green-800 rounded hover:bg-green-700">Profile</button>
-    </nav>
 
-    <div class="container mx-auto mt-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold mb-2">Donations Received</h2>
-                <p class="text-green-700">$5,000</p>
+<body class="bg-green-50">
+    <div class="navbar bg-gradient-to-r from-green-500 to-green-700 text-white shadow-md">
+        <div class="navbar-start">
+            <a class="btn btn-ghost text-2xl">EverGreen Foundation</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+                <li><a>Dashboard</a></li>
+                <li><a>Profile</a></li>
+                <li><a>Orders</a></li>
+                <li><a>Donations</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <button
+                class="btn bg-green-500 text-black hover:bg-green-700 transition-colors duration-200 ease-in-out">Log
+                Out</button>
+        </div>
+    </div>
+
+
+    
+    <div class="container mx-auto p-5">
+        <h1 class="text-3xl font-bold text-gray-800 my-5">Welcome, You are logged in as Admin!</h1>
+
+         <!-- Statistics Cards -->
+         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+            <!-- Total Donations Received Card -->
+            <div class=" p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                <h2 class="text-xl font-semibold mb-2">Total Donations Received</h2>
+                <p class="text-4xl text-green-600">18,650 Tk.</p>
+                <div class="text-sm text-gray-600 mt-2">Compared to last month: <span class="text-green-500">+15%</span></div>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold mb-2">Pending Orders</h2>
-                <!-- Placeholder for pending orders list -->
+
+            <!-- User Management Cards -->
+            <div class=" p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                <h2 class="text-xl font-semibold mb-2">Total Users</h2>
+                <p class="text-4xl text-green-600">1,024</p>
             </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold mb-2">Ongoing Orders</h2>
-                <!-- Placeholder for ongoing orders list -->
+
+            <div class=" p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                <h2 class="text-xl font-semibold mb-2">Active Users</h2>
+                <p class="text-4xl text-green-600">890</p>
+            </div>
+        </div>
+
+        <!-- User Activity Feed -->
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">User Activity Feed</h2>
+            <div class=" p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                <ul class="divide-y divide-gray-200">
+                    <li class="py-4">Shayan Abrar logged in at 09:45 AM, 22/01/2024</li>
+                    <li class="py-4">JH Tuhin signed up at 11:30 AM, 22/01/2024</li>
+                    <li class="py-4">Samia Sharmin Dola made a donation of 250 Tk. at 02:15 PM, 22/01/2024</li>
+                    <li class="py-4">Samin Yeasar logged out at 06:18 AM, 22/01/2024</li>
+                    <li class="py-4">Asaduzaman Saymon made a donation of 180 Tk. at 10:20 AM, 22/01/2024</li>
+                    <li class="py-4">Rifah Sanzida signed up at 8:58 AM, 22/01/2024</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- User Feedback Section -->
+        <div class="mt-10">
+            <h2 class="text-2xl font-bold mb-4">User Feedback</h2>
+            <div class=" p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                <ul class="divide-y divide-gray-200">
+                    <li class="py-4">
+                        <p class="font-semibold">Shayan Abrar - <span class="text-sm font-normal">22/01/2024</span></p>
+                        <p>"I really appreciate the initiative, but I think the website could use a tutorial section for new users."</p>
+                    </li>
+                    <li class="py-4">
+                        <p class="font-semibold">JH Tuhin - <span class="text-sm font-normal">23/01/2024</span></p>
+                        <p>"Great experience using your platform! However, it would be great if the donation process was a bit simpler."</p>
+                    </li>
+                    <li class="py-4">
+                        <p class="font-semibold">Samia Sharmin Dola - <span class="text-sm font-normal">24/01/2024</span></p>
+                        <p>"Loved the dashboard! It would be helpful to have more detailed reports on our contributions."</p>
+                    </li>
+                    <!-- Additional feedback entries -->
+                </ul>
+            </div>
+            <div class="mt-10">
+                <h2 class="text-2xl font-bold mb-4">Customization and Settings</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                        <h3 class="text-xl font-semibold mb-2">Theme Customization</h3>
+                        <p>Adjust the look and feel of the website or app interface.</p>
+                        <button class="btn bg-green-500 mt-4">Customize Theme</button>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                        <h3 class="text-xl font-semibold mb-2">System Settings</h3>
+                        <p>Manage time zones, languages, and notification preferences.</p>
+                        <button class="btn bg-green-500 mt-4">System Settings</button>
+                    </div>
+                    <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                        <h3 class="text-xl font-semibold mb-2">API Integrations</h3>
+                        <p>Configure third-party services and APIs.</p>
+                        <button class="btn bg-green-500 mt-4">Manage APIs</button>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Security and Compliance Section -->
+            <div class="mt-10">
+                <h2 class="text-2xl font-bold mb-4">Security and Compliance</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                        <h3 class="text-xl font-semibold mb-2">Activity Logs</h3>
+                        <p>Detailed logs for security auditing.</p>
+                        <button class="btn bg-green-500 mt-4">View Logs</button>
+                    </div>
+                    
+                    <div class="p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out bg-green-100">
+                        <h3 class="text-xl font-semibold mb-2">Backup and Restore</h3>
+                        <p>Options for data backup and restoration.</p>
+                        <button class="btn bg-green-500 mt-4">Manage Backups</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
+   
+
+    <!-- Footer -->
     <footer class="bg-green-600 text-white text-center p-4 mt-10">
-        <p>&copy; 2024 Tree Charity. All rights reserved.</p>
+        <p>&copy; 2024 EverGreen Foundation. All rights reserved.</p>
     </footer>
 </body>
 </html>

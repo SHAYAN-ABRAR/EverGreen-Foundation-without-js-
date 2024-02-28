@@ -1,32 +1,293 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Volunteer Dashboard - Tree Plantation Charity Management System</title>
+    <title>Volunteer Dashboard - EverGreen Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
+
 <body class="bg-green-50">
-    <nav class="bg-green-600 text-white p-4 flex justify-between">
-        <span class="font-bold">Volunteer Dashboard</span>
-        <button class="px-4 py-2 bg-green-800 rounded hover:bg-green-700">Profile</button>
-    </nav>
+    <div class="navbar bg-gradient-to-r from-green-500 to-green-700 text-white shadow-md">
+        <div class="navbar-start">
+            <a class="btn btn-ghost text-2xl">EverGreen Foundation</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+                <li><a>Dashboard</a></li>
+                <li><a>Profile</a></li>
+                <li><a>Orders</a></li>
+                <li><a>Donations</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <button
+                class="btn bg-green-500 text-black hover:bg-green-700 transition-colors duration-200 ease-in-out">Log
+                Out</button>
+        </div>
+    </div>
 
-    <div class="container mx-auto mt-10">
-        <!-- Sections for ongoing and past orders -->
-        <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
-            <h2 class="text-2xl font-bold mb-2">Ongoing Orders</h2>
-            <!-- Placeholder for ongoing orders list -->
+
+
+
+
+    <div class="container mx-auto p-5">
+        <h1 class="text-3xl font-bold text-gray-800 my-5">Welcome, You are logged in as a Volunteer!</h1>
+
+
+        <div class="mt-10">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Your Orders</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Ongoing Order Card -->
+                <div
+                    class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons mr-3 text-green-600 text-3xl">autorenew</span>
+                        <h3 class="text-2xl font-semibold">Ongoing Orders</h3>
+                    </div>
+                    <ul class="list-disc pl-8 text-gray-700 space-y-3">
+                        <li class="text-lg">Tree Planting Event in Dhanmmondi - Scheduled for 20/03/2024</li>
+                        <li class="text-lg">Tree Planting Event in Mirpur - Scheduled for 25/03/2024</li>
+                        <li class="text-lg">Tree delivery in Kuril - In Progress</li>
+                        <!-- Additional ongoing orders can be listed here -->
+                    </ul>
+                </div>
+
+
+                <!-- Past Order Card -->
+                <div
+                    class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                    <div class="flex items-center mb-6">
+                        <span class="material-icons mr-3 text-gray-600 text-3xl">check_circle</span>
+                        <h3 class="text-2xl font-semibold">Past Orders</h3>
+                    </div>
+                    <ul class="list-disc pl-8 text-gray-700 space-y-3">
+                        <li class="text-lg">Community Tree Plantation - Completed on 15/02/2024</li>
+                        <li class="text-lg">Urban Gardening Workshop - Completed on 08/01/2024</li>
+                        <!-- Additional past orders can be listed here -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+
+        <div class="mb-10">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Volunteer Opportunities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Available Opportunities Card -->
+                <div
+                    class="shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-6">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center justify-between">
+                        <span>Available Opportunities</span>
+                        <span class="material-icons text-green-600">event_available</span>
+                    </h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li class="flex justify-between items-center">
+                            <span>Tree Planting Event in Uttara</span>
+                            <button class="btn btn-sm bg-green-500 text-white hover:bg-green-700">Register</button>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Roadside Tree Plantation event</span>
+                            <button class="btn btn-sm bg-green-500 text-white hover:bg-green-700">Register</button>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span>Gardening Workshop</span>
+                            <button class="btn btn-sm bg-green-500 text-white hover:bg-green-700">Register</button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- My Opportunities Card -->
+                <div
+                    class="shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-6">
+                    <h3 class="text-xl font-semibold mb-4 flex items-center justify-between">
+                        <span>My Opportunities</span>
+                        <span class="material-icons text-gray-600">check_circle</span>
+                    </h3>
+                    <ul class="list-disc pl-5 text-gray-700 space-y-2">
+                        <li>Community Park Tree Plantation event - 05/04/2024</li>
+                        <li>Tree delivery in Uttara - 12/05/2024</li>
+                        <!-- Additional signed-up opportunities can be listed here -->
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="bg-white p-6 rounded-lg shadow-lg">
-            <h2 class="text-2xl font-bold mb-2">Past Orders</h2>
-            <!-- Placeholder for past orders list -->
+
+        <!-- Training and Resources -->
+        <div class="mb-10">
+            <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Training and Resources</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Training Modules Card -->
+                <div
+                    class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                    <div class="flex items-center mb-4">
+                        <span class="material-icons mr-3 text-green-600 text-3xl">school</span>
+                        <h3 class="text-2xl font-semibold">Training Modules</h3>
+                    </div>
+                    <ul class="list-disc pl-8 text-gray-700 space-y-3">
+                        <li class="text-lg">
+                            <a href="#" class="text-green-600 hover:text-green-800">Basic Tree Planting Techniques</a>
+                        </li>
+                        <li class="text-lg">
+                            <a href="#" class="text-green-600 hover:text-green-800">Conservation and Biodiversity</a>
+                        </li>
+                        <li class="text-lg">
+                            <a href="#" class="text-green-600 hover:text-green-800">Urban Gardening Essentials</a>
+                        </li>
+                        <!-- Additional training modules links -->
+                    </ul>
+                </div>
+
+                <!-- Resource Library Card -->
+                <div
+                    class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                    <div class="flex items-center mb-4">
+                        <span class="material-icons mr-3 text-blue-600 text-3xl">local_library</span>
+                        <h3 class="text-2xl font-semibold">Resource Library</h3>
+                    </div>
+                    <ul class="list-disc pl-8 text-gray-700 space-y-3">
+                        <li class="text-lg">
+                            <a href="#" class="text-green-600 hover:text-green-800">Volunteer Handbook</a>
+                        </li>
+                        <li class="text-lg">
+                            <a href="#" class="text-green-600 hover:text-green-800">Environmental Impact Reports</a>
+                        </li>
+                        <li class="text-lg">
+                            <a href="#" class="text-green-600 hover:text-green-800">Community Engagement Strategies</a>
+                        </li>
+                        <!-- Additional resource library links -->
+                    </ul>
+                </div>
+            </div>
         </div>
+
+
+      <!-- Schedule and Time Tracking -->
+<div class="mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Schedule and Time Tracking</h2>
+    <div class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8 flex flex-col md:flex-row justify-between gap-4 items-stretch">
+        <!-- Personal Schedule -->
+        <div class="flex-1">
+            <div class="flex items-center mb-4">
+                <span class="material-icons mr-3 text-green-600 text-3xl">event</span>
+                <h3 class="text-2xl font-semibold">Personal Schedule</h3>
+            </div>
+            <p class="text-lg text-gray-700 mb-4">Keep track of your volunteering events and activities.</p>
+            <div class="text-center">
+                <button class="btn bg-green-500 text-white hover:bg-green-700">View Calendar</button>
+            </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="hidden md:block w-px bg-gray-300 mx-4"></div>
+
+        <!-- Time Tracking -->
+        <div class="flex-1">
+            <div class="flex items-center mb-4">
+                <span class="material-icons mr-3 text-blue-600 text-3xl">access_time</span>
+                <h3 class="text-2xl font-semibold">Time Tracking</h3>
+            </div>
+            <p class="text-lg text-gray-700 mb-4">Log the hours you've contributed to various projects.</p>
+            <div class="text-center">
+                <button class="btn bg-blue-500 text-white hover:bg-blue-700">Log Hours</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+       <!-- Recognition and Rewards -->
+<div class="mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Recognition and Rewards</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Achievements Card -->
+        <div class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+            <div class="flex items-center mb-4">
+                <span class="material-icons mr-3 text-orange-500 text-3xl">emoji_events</span>
+                <h3 class="text-2xl font-semibold">Achievements</h3>
+            </div>
+            <ul class="list-disc pl-8 text-gray-700 space-y-3">
+                <li class="text-lg">100 Hours Volunteered - <span class="font-semibold">Gold Volunteer</span></li>
+                <li class="text-lg">First Tree Plantation - <span class="font-semibold">Green Initiator</span></li>
+                <li class="text-lg">5 Events Participated - <span class="font-semibold">Active Contributor</span></li>
+                <!-- Additional achievements -->
+            </ul>
+        </div>
+
+        <!-- Rewards Program Card -->
+        <div class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+            <div class="flex items-center mb-4">
+                <span class="material-icons mr-3 text-purple-500 text-3xl">card_giftcard</span>
+                <h3 class="text-2xl font-semibold">Rewards Program</h3>
+            </div>
+            <p class="text-lg text-gray-700 mb-4">Engage in volunteering activities and earn rewards:</p>
+            <ul class="list-disc pl-8 text-gray-700 space-y-3">
+                <li class="text-lg">50 Hours - <span class="font-semibold">Eco Warrior Badge</span></li>
+                <li class="text-lg">Lead a Project - <span class="font-semibold">Leadership Medal</span></li>
+                <li class="text-lg">Special Contributions - <span class="font-semibold">Certificate of Appreciation</span></li>
+                <!-- Additional rewards -->
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+       <!-- Reports and Impact -->
+<div class="mb-10">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800 text-center">Reports and Impact</h2>
+    <div class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+        <!-- Personal Impact Report -->
+        <div class="mb-8">
+            <div class="flex items-center mb-4">
+                <span class="material-icons mr-3 text-green-600 text-3xl">insights</span>
+                <h3 class="text-2xl font-semibold">Personal Impact Report</h3>
+            </div>
+            <p class="text-lg text-gray-700 mb-4">A summary of your contributions to our cause:</p>
+            <ul class="list-disc pl-8 text-gray-700 space-y-2">
+                <li class="text-lg">Total Hours Volunteered: <span class="font-semibold">120+ hours</span></li>
+                <li class="text-lg">Events Participated: <span class="font-semibold">8 events</span></li>
+                <li class="text-lg">Trees Planted: <span class="font-semibold">250+ trees</span></li>
+            </ul>
+            <div class="mt-4 text-center">
+                <button class="btn bg-green-500 text-white hover:bg-green-700">View Full Report</button>
+            </div>
+        </div>
+        <hr>
+        <hr>
+
+        <!-- Organization Impact -->
+        <div>
+            <div class="flex items-center mb-4">
+                <span class="material-icons mr-3 text-blue-600 text-3xl">public</span>
+                <h3 class="text-2xl font-semibold">Organization Impact</h3>
+            </div>
+            <p class="text-lg text-gray-700 mb-4">How our collective efforts are making a difference:</p>
+            <ul class="list-disc pl-8 text-gray-700 space-y-2">
+                <li class="text-lg">Total Hours Contributed by Volunteers: <span class="font-semibold">5,000+ hours</span></li>
+                <li class="text-lg">Total Trees Planted: <span class="font-semibold">15,000+ trees</span></li>
+                <li class="text-lg">Community Projects Completed: <span class="font-semibold">20 projects</span></li>
+            </ul>
+            <div class="mt-4 text-center">
+                <button class="btn bg-blue-500 text-white hover:bg-blue-700">Explore Impact</button>
+            </div>
+        </div>
+    </div>
+</div>
+
     </div>
 
     <footer class="bg-green-600 text-white text-center p-4 mt-10">
         <p>&copy; 2024 Tree Charity. All rights reserved.</p>
     </footer>
 </body>
+
 </html>

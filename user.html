@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - EverGreen Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-green-50">
+    <div class="navbar bg-gradient-to-r from-green-500 to-green-700 text-white shadow-md">
+        <div class="navbar-start">
+            <a class="btn btn-ghost text-xl">EverGreen Foundation</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+                <li><a>Dashboard</a></li>
+                <li><a>Profile</a></li>
+                <li><a>Orders</a></li>
+                <li><a>Donations</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <button
+                class="btn bg-green-500 text-black hover:bg-green-700 transition-colors duration-200 ease-in-out">Log
+                Out</button>
+        </div>
+    </div>
+
+    <div class="container mx-auto mt-10 p-4">
+        <h2 class="text-3xl font-bold mb-6 text-gray-800">Welcome, You are logged in as User!</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="card shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg">
+                <div class="card-body text-gray-800 p-5 bg-green-100">
+                    <h2 class="card-title text-2xl">Your Impact</h2>
+                    <p class="mt-2">Trees Planted: 68</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-300">
+                        <div class="bg-green-600 h-2.5 rounded-full" style="width: 68%"></div>
+                    </div>
+                    <p class="mt-4">Carbon Offset: 25kg</p>
+                    <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-300 mt-2">
+                        <div class="bg-blue-600 h-2.5 rounded-full" style="width: 25%"></div>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="card shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100">
+                <div class="card-body text-gray-800 p-5">
+                    <h2 class="card-title text-2xl">Recent Donations</h2>
+                    <p class="mt-2">$150 to Amazon Reforestation</p>
+                </div>
+            </div>
+            <div
+                class="card shadow-lg hover:shadow-2xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100">
+                <div class="card-body text-gray-800 p-5">
+                    <h2 class="card-title text-2xl">Feedback</h2>
+                    <p class="mt-2">Help us improve our platform by providing your valuable feedback.</p>
+                    <button
+                        class="btn bg-gradient-to-r from-green-500 to-green-700 text-white hover:from-green-600 hover:to-green-800 mt-4">Give
+                        Feedback</button>
+                </div>
+            </div>
+           
+                <div class="container mx-auto mt-10 p-4">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Milestones</h2>
+                    <div class="bg-green-100 shadow-lg rounded-lg p-5">
+                        <h3 class="text-xl font-semibold mb-4">Your Journey's Highlights</h3>
+                        <p>First Tree Planted: <span class="font-medium">22/01/2023</span> - The beginning of your
+                            journey.</p>
+                        <p>25th Tree Planted: <span class="font-medium">18/05/2023</span> - Achieved a mini-forest.</p>
+                        <p>50th Tree Planted: <span class="font-medium">04/07/2023</span> - Nature Lover</p>
+                    </div>
+                </div>
+
+                <div class="container mx-auto mt-10 p-4">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">Goals for Next Year</h2>
+                    <div class="bg-green-100 shadow-lg rounded-lg p-5">
+                        <h3 class="text-xl font-semibold mb-4">Set Your Sights Higher</h3>
+                        <ul class="list-disc pl-5">
+                            <li>Plant 50 More Trees: Double your current impact.</li>
+                            <li>Offset 50kg of CO2: Increase your carbon offset by engaging in more sustainable
+                                practices and contributions.</li>
+                        </ul>
+                    </div>
+                </div>
+           
+
+        </div>
+    </div>
+
+
+    <div class="flex flex-col items-center justify-center mt-6">
+        <label for="location" class="block mb-2 text-sm font-medium text-gray-900">Select Location for Tree
+            Planting</label>
+        <select id="location" class="select select-bordered w-full max-w-xs bg-white text-gray-800">
+            <option disabled selected class="bg-white text-gray-800">Choose a location</option>
+            <option value="1" class="bg-white text-gray-800">Mohammadpur</option>
+            <option value="2" class="bg-white text-gray-800">Mirpur</option>
+            <option value="1" class="bg-white text-gray-800">Dhanmmondi</option>
+            <option value="2" class="bg-white text-gray-800">Kuril</option>
+        </select>
+    </div>
+
+    <div class="flex gap-4 mt-4  items-center justify-center">
+        <button
+            class="btn bg-gradient-to-r from-green-500 to-green-700 text-white hover:from-green-600 hover:to-green-800">Donate
+            Cash</button>
+        <button
+            class="btn bg-gradient-to-r from-green-500 to-green-700 text-white hover:from-green-600 hover:to-green-800">Buy
+            Now</button>
+    </div>
+
+    <div class="mt-10 container mx-auto px-4">
+        <h2 class="text-3xl font-bold mb-8 text-gray-900">Past Orders</h2>
+        <div class="flex flex-col gap-8">
+            <!-- Sample Order 1 with enhanced design -->
+            <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 rounded-lg p-4">
+                <div class="card-body">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+
+                        Order #126
+                    </h3>
+                    <p class="text-gray-600">Date: <span class="text-gray-700 font-medium">2023-07-15</span></p>
+                    <p class="text-gray-600">Location: <span class="text-gray-700 font-medium">Mohammadpur</span>
+                    </p>
+                    <p class="text-gray-600">Amount: <span class="text-gray-700 font-medium">1,000 Tk.</span></p>
+                    <p class="text-gray-600">Status: <span class="text-orange-500 font-medium">In Transit</span></p>
+                </div>
+            </div>
+            <!-- Sample Order 2 with enhanced design -->
+            <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 rounded-lg p-4">
+                <div class="card-body">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+
+                        Order #156
+                    </h3>
+                    <p class="text-gray-600">Date: <span class="text-gray-700 font-medium">2023-08-20</span></p>
+                    <p class="text-gray-600">Location: <span class="text-gray-700 font-medium">Mirpur</span></p>
+                    <p class="text-gray-600">Amount: <span class="text-gray-700 font-medium">860 Tk.</span></p>
+                    <p class="text-gray-600">Status: <span class="text-green-500 font-medium">Delivered</span></p>
+
+                </div>
+            </div>
+            <!-- Sample Order 3 with enhanced design -->
+            <div class="card bg-white shadow-lg hover:shadow-xl transition-shadow duration-200 rounded-lg p-4">
+                <div class="card-body">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2 flex items-center">
+
+                        Order #116
+                    </h3>
+                    <p class="text-gray-600">Date: <span class="text-gray-700 font-medium">2023-09-05</span></p>
+                    <p class="text-gray-600">Location: <span class="text-gray-700 font-medium">Dhanmondi</span></p>
+                    <p class="text-gray-600">Amount: <span class="text-gray-700 font-medium">200 Tk.</span></p>
+                    <p class="text-gray-600">Status: <span class="text-red-500 font-medium">Cancelled</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <footer class="footer footer-center p-4 bg-gradient-to-r from-green-600 to-green-800 text-white mt-10">
+        <div>
+            <p>&copy; 2024 Tree Charity. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,38 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donor Dashboard - Tree Plantation Charity Management System</title>
+    <title>Donor Dashboard - EverGreen Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body class="bg-green-50">
-    <nav class="bg-green-600 text-white p-4 flex justify-between">
-        <span class="font-bold">Donor Dashboard</span>
-        <button class="px-4 py-2 bg-green-800 rounded hover:bg-green-700">Profile</button>
-    </nav>
-
-    <div class="container mx-auto mt-10">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
-                <h2 class="text-2xl font-bold mb-2">Current Orders</h2>
-                <!-- Placeholder for current orders -->
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-lg mb-6">
-                <h2 class="text-2xl font-bold mb-2">Trees Available</h2>
-                <!-- Placeholder for tree inventory -->
-            </div>
-
-            <div class="bg-white p-6 rounded-lg shadow-lg">
-                <h2 class="text-2xl font-bold mb-2">Past Orders</h2>
-                <!-- Placeholder for past orders -->
-            </div>
+    <div class="navbar bg-gradient-to-r from-green-500 to-green-700 text-white shadow-md">
+        <div class="navbar-start">
+            <a class="btn btn-ghost text-2xl">EverGreen Foundation</a>
+        </div>
+        <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal p-0">
+                <li><a>Dashboard</a></li>
+                <li><a>Profile</a></li>
+                <li><a>Orders</a></li>
+                <li><a>Donations</a></li>
+                <li><a>Contact</a></li>
+            </ul>
+        </div>
+        <div class="navbar-end">
+            <button
+                class="btn bg-green-500 text-black hover:bg-green-700 transition-colors duration-200 ease-in-out">Log
+                Out</button>
         </div>
     </div>
 
-    <footer class="bg-green-600 text-white text-center p-4 mt-10">
-        <p>&copy; 2024 Tree Charity. All rights reserved.</p>
-    </footer>
+    <div class="container mx-auto p-5">
+        <h1 class="text-3xl font-bold text-gray-800 my-5 ">Welcome, You are logged in as a Donor!</h1>
+
+        <!-- Dashboard Overview -->
+        <div class="mt-10 mb-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center mb-6">
+                <!-- Item 1: Total Trees Donated -->
+                <div
+                    class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                    <span class="material-icons text-green-500 text-4xl">park</span>
+                    <h2 class="text-xl font-bold mt-2">Total Trees Donated</h2>
+                    <p class="text-lg font-semibold">718 Pcs</p>
+                </div>
+
+                <!-- Item 2: Carbon Offset Achieved -->
+                <div
+                    class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                    <span class="material-icons text-blue-500 text-4xl">eco</span>
+                    <h2 class="text-xl font-bold mt-2">Carbon Offset Achieved</h2>
+                    <p class="text-lg font-semibold">300kg</p>
+                </div>
+
+                <!-- Item 3: Donation Impact -->
+                <div
+                    class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                    <span class="material-icons text-orange-500 text-4xl">show_chart</span>
+                    <h2 class="text-xl font-bold mt-2">Donation Impact</h2>
+                    <p class="text-lg font-semibold">Improved 500 sqm of Habitat</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Sections -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Current Orders/Contributions -->
+            <div
+                class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                <h2 class="text-2xl font-bold mb-4">Current Orders/Contributions</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2">shopping_cart</span>
+                            <div>
+                                <p class="text-lg font-semibold">Tree Planting Event in Mirpur Park</p>
+                                <p class="text-sm text-gray-600">Contribution: 50 Trees</p>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Status: In Transit</span>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2">shopping_cart</span>
+                            <div>
+                                <p class="text-lg font-semibold">Urban Greening Project Campaign</p>
+                                <p class="text-sm text-gray-600">Contribution: 200 Saplings</p>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Status: In Progress</span>
+                    </div>
+
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <span class="material-icons text-green-600 mr-2">shopping_cart</span>
+                            <div>
+                                <p class="text-lg font-semibold">National Park Restoration</p>
+                                <p class="text-sm text-gray-600">Contribution: 150 Trees</p>
+                            </div>
+                        </div>
+                        <span class="text-sm text-gray-500">Status: In Progress</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Available Trees for Planting -->
+            <div
+                class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                <h2 class="text-2xl font-bold mb-4">Trees Available for Donation</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <!-- Tree Card 1 -->
+                    <div class="bg-green-100 p-4 shadow-lg rounded-lg">
+                        <h3 class="text-lg font-bold">Mango Tree</h3>
+                        <p class="text-sm text-gray-600">Great for biodiversity and provides extensive shade with
+                            seasonal fruits.</p>
+                        <p class="text-sm font-semibold">Available: 200 pcs</p>
+                        <button class="btn bg-green-500 text-white mt-2">Contribute</button>
+                    </div>
+
+                    <!-- Tree Card 2 -->
+                    <div class="bg-green-100 p-4 shadow-lg rounded-lg">
+                        <h3 class="text-lg font-bold">Jackfruit Tree</h3>
+                        <p class="text-sm text-gray-600">This tree is a good source of wood for timber industries with
+                            various benefits.</p>
+                        <p class="text-sm font-semibold">Available: 150 pcs</p>
+                        <button class="btn bg-green-500 text-white mt-2">Contribute</button>
+                    </div>
+
+                    <!-- Tree Card 3 -->
+                    <div class="bg-green-100 p-4 shadow-lg rounded-lg">
+                        <h3 class="text-lg font-bold">Guava Tree</h3>
+                        <p class="text-sm text-gray-600">Evergreen, perfect for windbreaks and seasonal fruits.</p>
+                        <p class="text-sm font-semibold">Available: 300 pcs</p>
+                        <button class="btn bg-green-500 text-white mt-2">Contribute</button>
+                    </div>
+                    <!-- Additional tree cards can be added here -->
+                </div>
+            </div>
+
+
+            <!-- Past Orders/Contributions -->
+            <div
+                class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                <h2 class="text-2xl font-bold mb-4">Past Orders/Contributions</h2>
+                <ul class="space-y-4">
+                    <!-- Contribution 1 -->
+                    <li class="border-b pb-4">
+                        <h3 class="text-lg font-semibold">50 Mango Trees - Tree Plantation event </h3>
+                        <p class="text-sm text-gray-600">Date: January 15, 2024</p>
+                        <p class="text-sm">Status: <span class="text-green-500">Completed</span></p>
+                    </li>
+                    <!-- Contribution 2 -->
+                    <li class="border-b pb-4">
+                        <h3 class="text-lg font-semibold"> 180 Guava Trees - ABC Development Program</h3>
+
+                        <p class="text-sm text-gray-600">Date: February 20, 2024</p>
+                        <p class="text-sm">Status: <span class="text-green-500">Completed</span></p>
+                    </li>
+                    <!-- Contribution 3 -->
+                    <li class="border-b pb-4">
+                        <h3 class="text-lg font-semibold">100 Papaya Trees - Community Park</h3>
+                        <p class="text-sm text-gray-600">Date: March 05, 2024</p>
+                        <p class="text-sm">Status: <span class="text-green-500">Completed</span></p>
+                    </li>
+                    <!-- More contributions can be listed in the same format -->
+                </ul>
+            </div>
+
+
+            <!-- Personal Impact Report -->
+            <div
+                class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                <h2 class="text-2xl font-bold mb-4">Personal Impact Report</h2>
+                <div class="space-y-4">
+                    <!-- Impact Area 1: Trees Planted -->
+                    <div>
+                        <h3 class="text-lg font-semibold flex items-center">
+                            <span class="material-icons mr-2 text-green-600">nature</span>Trees Planted
+                        </h3>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                            <div class="bg-green-500 h-2.5 rounded-full" style="width: 75%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-1">75% towards next milestone (400 Trees)</p>
+                    </div>
+
+                    <!-- Impact Area 2: Carbon Offset -->
+                    <div>
+                        <h3 class="text-lg font-semibold flex items-center">
+                            <span class="material-icons mr-2 text-blue-600">cloud</span>Carbon Offset
+                        </h3>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                            <div class="bg-blue-500 h-2.5 rounded-full" style="width: 60%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-1">60% towards goal of 500kg offset</p>
+                    </div>
+
+                    <!-- Impact Area 3: Habitat Improved -->
+                    <div>
+                        <h3 class="text-lg font-semibold flex items-center">
+                            <span class="material-icons mr-2 text-orange-500">landscape</span>Habitat Improved
+                        </h3>
+                        <div class="w-full bg-gray-200 rounded-full h-2.5 mt-2">
+                            <div class="bg-orange-500 h-2.5 rounded-full" style="width: 50%;"></div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-1">50% towards goal of improving 1000 sqm</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Messages from Happy Tree Donation Receivers -->
+            <div
+                class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                <h2 class="text-2xl font-bold mb-4">Messages from Receivers</h2>
+                <div class="space-y-4">
+                    <!-- Message 1 -->
+                    <div class="p-4 bg-green-200 rounded-lg">
+                        <p class="text-md font-semibold">"The new trees have transformed our community park. Thank you
+                            for your generosity!"</p>
+                        <p class="text-sm text-gray-600 mt-2">- Local Community, Uttara</p>
+                    </div>
+
+                    <!-- Message 2 -->
+                    <div class="p-4 bg-green-200 rounded-lg">
+                        <p class="text-md font-semibold">"Your donation helped us reach our goal faster than we
+                            imagined. The children now have a greener space to play in."</p>
+                        <p class="text-sm text-gray-600 mt-2">-Mirpur High School Principal, Mirpur</p>
+                    </div>
+
+                    <!-- Message 3 -->
+                    <div class="p-4 bg-green-200 rounded-lg">
+                        <p class="text-md font-semibold">"Thanks to your support, we've been able to provide habitats
+                            for local wildlife and beautify our neighborhood."</p>
+                        <p class="text-sm text-gray-600 mt-2">- Environmental NGO, Dhaka</p>
+                    </div>
+                    <!-- Additional messages can be added here -->
+                </div>
+            </div>
+
+
+            <!-- Certificates/Acknowledgments -->
+            <div
+                class="shadow-lg hover:shadow-xl transition-shadow duration-300 ease-in-out rounded-lg bg-green-100 p-8">
+                <h2 class="text-3xl font-bold mb-6 text-gray-800">Certificates/Acknowledgments</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                    <!-- Enhanced Certificate 1 -->
+                    <div
+                        class="certificate-card relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('certificate-bg-1.jpg');"></div>
+                        <div class="absolute inset-0 bg-green-200 opacity-75"></div>
+                        <div class="relative z-10 p-4">
+                            <span class="material-icons text-green-600 text-4xl">verified_user</span>
+                            <h3 class="text-lg font-semibold text-gray-800 mt-2">Environmental Steward</h3>
+                            <p class="text-sm text-gray-800 mt-1">Awarded for planting over 100 trees</p>
+                            <button class="btn mt-2 bg-green-600 text-white">View Certificate</button>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Certificate 2 -->
+                    <div
+                        class="certificate-card relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('certificate-bg-2.jpg');"></div>
+                        <div class="absolute inset-0 bg-green-200 opacity-75"></div>
+                        <div class="relative z-10 p-4">
+                            <span class="material-icons text-blue-600 text-4xl">emoji_events</span>
+                            <h3 class="text-lg font-semibold text-gray-800 mt-2">Carbon Offset Champion</h3>
+                            <p class="text-sm text-gray-800 mt-1">Achieved 500kg of carbon offset</p>
+                            <button class="btn mt-2 bg-blue-600 text-white">View Certificate</button>
+                        </div>
+                    </div>
+
+                    <!-- Enhanced Certificate 3 -->
+                    <div
+                        class="certificate-card relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition duration-300 ease-in-out">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            style="background-image: url('certificate-bg-3.jpg');"></div>
+                        <div class="absolute inset-0 bg-green-200 opacity-75"></div>
+                        <div class="relative z-10 p-4">
+                            <span class="material-icons text-orange-600 text-4xl">star_rate</span>
+                            <h3 class="text-lg font-semibold text-gray-800 mt-2">Habitat Hero</h3>
+                            <p class="text-sm text-gray-800 mt-1">Contribution to various habitat restoration in the
+                                country</p>
+                            <button class="btn mt-2 bg-orange-600 text-white">View Certificate</button>
+                        </div>
+                    </div>
+                    <!-- Additional certificates with enhancements can follow -->
+                </div>
+            </div>
+
+
+        </div>
+
+        <footer class="bg-green-600 text-white">
+            <div class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- About Section -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">About Us</h3>
+                    <p class="text-sm">
+                        At EverGreen Foundation, we're committed to making a lasting impact on the environment through comprehensive reforestation efforts and community-driven conservation projects. Our mission extends beyond planting trees; we strive to educate, inspire, and empower individuals and communities to join us in creating a sustainable future for our planet.
+                    </p>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Quick Links</h3>
+                    <ul class="text-sm space-y-1">
+                        <li><a href="#" class="hover:text-green-300 transition duration-300 ease-in-out">Home</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition duration-300 ease-in-out">About</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition duration-300 ease-in-out">Projects</a></li>
+                        <li><a href="#" class="hover:text-green-300 transition duration-300 ease-in-out">Contact</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Newsletter -->
+                <div>
+                    <h3 class="text-lg font-bold mb-2">Newsletter</h3>
+                    <form action="#" method="POST">
+                        <input type="email" placeholder="Your email address" class="p-2 rounded-lg text-gray-700 w-full mb-2">
+                        <button type="submit" class="w-full bg-green-500 hover:bg-green-400 text-white p-2 rounded-lg transition duration-300 ease-in-out">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        
+            <div class="text-center p-4 mt-4 border-t border-green-500">
+                <p>&copy; 2024 EverGreen Foundation. All rights reserved.</p>
+            </div>
+        </footer>
+        
+        
+    </div>
 </body>
+
 </html>
